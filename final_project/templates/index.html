@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+  <div class="container">
+    <br>
+    {% if user.is_authenticated %}
+    Hello, {{user.username}}
+    {% else %}
+    Hello, world
+    {% endif %}
+  </div>
+</body>
+
+{% endblock %}
